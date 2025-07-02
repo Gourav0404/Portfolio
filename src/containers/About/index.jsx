@@ -106,7 +106,7 @@ const About = () => {
             }}
 
           >
-            <img src="src/assets/AboutMeSecationImage.jpg" alt="" />
+            <img src="/assets/AboutMeSecationImage.jpg" alt="" />
           </Animate>
         </div>
       </div>
