@@ -1,0 +1,139 @@
+.about {
+  margin-top: 50px;
+
+
+  &__content {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    width: 100%;
+    margin-top: 40px;
+
+
+    &__details,
+    &__images {
+      width: 50%;
+    }
+
+    &__details {
+      h2 {
+        margin-bottom: 20px;
+        font-size: 3rem;
+        font-weight: 900;
+        color: var(--yellow-theme-main-color);
+      }
+
+      h2 {
+        padding-top: 20px;
+        margin-top: 50px;
+      }
+
+      p {
+        font-size: 1.9rem;
+        font-weight: 400;
+        color: wheat;
+        line-height: 1.65;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--yellow-theme-main-color);
+      }
+
+      ul>li {
+        line-height: 1rem;
+        margin-bottom: 20px;
+        margin-top: 60px;
+        font-size: 30px;
+        padding: 20px;
+
+
+        span.tittle,
+        span.value {
+          font-size: 18px;
+          font-weight: 600;
+          color: white;
+          letter-spacing: 0.5px;
+          position: relative;
+          display: inline-block;
+          margin-right: 30px;
+          padding-bottom: 3px;
+
+        }
+
+        span.value {
+          border: none;
+          margin-left: 20px;
+        }
+
+      }
+    }
+
+    // here we give the style the our image section
+    &__images {
+      display: flex;
+
+
+      img {
+        margin-top: 25%;
+        border-radius: 50%;
+        object-fit: cover;
+        height: 500px;
+        width: 500px;
+        margin-left: 30%;
+      }
+    }
+  }
+}
+
+
+// now we use the media questio to our phone decice
+
+@media only screen and (max-width: 600px) {
+  .about {
+
+    margin-top: 0px;
+
+    &__content {
+      flex-direction: column;
+      padding: 20px;
+      margin-top: 0px;
+
+      &__details,
+      &__images {
+        width: 100%;
+      }
+
+      &__details {
+        h2 {
+          font-size: 2.5rem;
+          margin-top: 0px; // Reduce the font size for smaller screens
+        }
+
+        p {
+          font-size: 2.2rem;
+
+          // Adjust paragraph font size for readability
+        }
+
+        ul>li {
+          padding: 0px;
+          margin-bottom: 0px;
+
+          span.tittle,
+          span.value {
+            font-size: 1.8rem; // Adjust list item text size
+            font-weight: 400;
+
+          }
+        }
+      }
+
+      &__images {
+        img {
+          height: 400px;
+          width: 400px; // Reduce the image size for mobile
+          margin-left: 30px;
+          margin-top: 10%;
+        }
+      }
+    }
+  }
+}

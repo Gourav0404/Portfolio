@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+/* here we target the all root element here */
+:root {
+  --yellow-theme-background-color: #181818;
+  --yellow-theme-main-color: #ffdd40;
+  --yellow-theme-sub-text-color: #ffffff;
+  --yellow-theme-nav-background-color: #181818;
+}
+
+/* he we apply the css our main contant */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* here we are trying to apply css in or html part */
+
+html {
+  font-size: 60%;
+  height: 100%;
+}
+
+/* now we apply css in our full body  */
+
+body {
+  background-color: var(--yellow-theme-background-color);
+  height: 100%;
+}
+
+/* here we are target the root element here to apply  css */
+
+#root {
+  height: 100%;
+}

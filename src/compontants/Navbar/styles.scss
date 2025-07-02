@@ -1,0 +1,118 @@
+.navbar {
+  background-color: rebeccapurple;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.4rem;
+  position: sticky;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    padding: 0px 20px;
+    flex: 1;
+
+    &__heading {
+      color: var(--yellow-theme-main-color);
+      cursor: pointer;
+      font-size: 30px;
+      margin-left: 40px;
+    }
+
+    &__menu {
+      display: flex;
+      list-style: none;
+      text-align: center;
+      margin-right: 30px;
+
+      &__item {
+        font-size: 38px;
+        line-height: 40px;
+        margin-right: 1.5rem;
+
+
+
+        &::after {
+          content: '';
+          display: block;
+          height: 8px;
+          width: 0;
+          margin-top: 5px;
+          background: transparent;
+          transition: all 0.5s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+          background: var(--yellow-theme-main-color);
+        }
+
+        &__links {
+          color: var(--yellow-theme-main-color);
+          text-decoration: none;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+
+.nav_icons {
+  display: none;
+}
+
+
+
+
+// now we use the media quary to manage or aap to display mobile
+
+@media only screen and (max-width : 768px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar__container__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-top: 1.5px solid white;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+
+    &.active {
+      background: #181818;
+      left: 0px;
+      overflow: 1;
+    }
+
+    &__item {
+      font-size: 28px;
+      border-bottom: 3px solid gray;
+      margin: 0px;
+      padding: 10px 0px;
+    }
+
+  }
+
+
+  .navbar__container__heading {
+    font-size: 28px;
+    margin-left: 0px;
+    color: rosybrown;
+  }
+
+  .nav_icons {
+    display: block;
+    cursor: pointer;
+    color: var(--yellow-theme-main-color);
+    padding: 20px;
+  }
+}

@@ -1,0 +1,95 @@
+.skills {
+  margin-top: 50px;
+
+  &__content-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+
+    &__inner-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__category-data {
+        display: inline-block;
+        font-size: 3rem;
+        margin-top: 100px;
+        font-weight: 800;
+        color: var(--yellow-theme-main-color);
+        line-height: 2rem;
+        letter-spacing: 0.5px;
+        position: relative;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border-bottom: 2px solid var(--yellow-theme-main-color);
+      }
+
+      &__category-data::before,
+      &__category-data::after {
+
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 5px;
+        background-color: var(--yellow-theme-main-color);
+        bottom: -1px;
+
+      }
+
+      &__category-data::before {
+        left: 0;
+      }
+
+      &__category-data::after {
+        right: 0;
+      }
+
+      div {
+        width: 100%;
+      }
+
+      .progress-wrapper {
+        padding: 50px 0px 0px 0px;
+
+        p {
+          font-size: 25px;
+          font-weight: 400;
+          margin: 0 0 10px;
+          margin-top: 50px;
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+// now we using media query to unable our mobile device
+
+@media only screen and (max-width:768px) {
+  .skills {
+    &__content-wrapper {
+      flex-direction: column;
+      margin-bottom: 0px;
+
+      .skills__content-wrapper__inner-text__category-data {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .skills__content-wrapper__inner-text__progressbar {
+
+
+    .progress-wrapper {
+      padding-bottom: 10px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+}
