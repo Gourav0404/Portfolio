@@ -45,13 +45,15 @@ const Navbar = () => {
         <ul className={`navbar__container__menu ${toggleIcon ? 'active' : ''}`}>
 
           {
-            data.map((item, key) => (
+            data.map((item, key) => 
               <li key={key} className="navbar__container__menu__item">
-                <Link className="navbar__container__menu__item__links" to={item.to}>
-                  {item.lable}
+                <Link  className="navbar__container__menu__item__links"  to={item.to}
+                  onClick={() => setToggleIcon(false)}// ✅ This line is the fix
+                  >
+                   {item.lable}
                 </Link>
-              </li>
-            ))
+             </li>
+                    ))
           }
 
         </ul>
